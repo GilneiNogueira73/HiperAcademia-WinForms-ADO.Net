@@ -63,6 +63,7 @@ namespace CadastroClienteAcademiaCsharp
 
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
+            if (dgvCidade.CurrentRow is null) return;
             if (dgvCidade.SelectedCells.Count > 0)
             {
                 _formularioCliente.cidadeId = dgvCidade.CurrentRow.Cells["Id"].Value.ToString();
